@@ -1,47 +1,20 @@
-#include <iostream>
-#include <unistd.h>
-#include <stdio.h>
-#include <string>
-using namespace std;
+void ShowMainMenu();
 
-void ShowMainMenu(){
-	system("clear");
-	cout << "MENU: "<< endl
-	<< "1. Ingresar registro."<< endl
-	<< "2. Ver registro."<< endl
-	<< "3. Borrar registro."<< endl
-	<< "4. Buscar registro."<< endl
-	<< "5. Salir."<< endl;
-}
+bool UserContinue();
 
-int AskMenu(){
-	int menuSelected;
-	cin >> menuSelected;
-	return menuSelected;
-}
+void LoadDataProgram();
 
-bool UserContinue(){
-	printf("Operación finalizada...\n");
-	printf("Presione ENTER para continuar.");
-	while(getchar() != '\n');
-	getchar();
-	printf("\n");
-}
+void Display1Ingress(); 
+void Display2View(); 
+void Display3Delete(); 
+void Display4Search(); 
+void Display5Exit(); 
+void ShowMessage(char _msg[20]);
+void ViewRegister(int _p1);
+void DeleteRegister(int _p1);
 
-void ListenAndGoToScreen(int _m){
-	system("clear");
-	cout << "ESTAMOS EN EL MENU "<<_m<<endl;
-	
-	UserContinue();
-	
-}
+void RegisterDog(char _n[32], char _t[32], int _a, char _b[16], int _h, float _w, char _s );
+void ConfirmDataToRegister(char _n[32], char _t[32], int _a, char _b[16], int _h, float _w, char _s );
 
-void DogToPrint(dogType _dog){
-	cout<<_dog.Name<<endl;
-	cout<<_dog.Type<<endl;
-	cout<<_dog.Age<<endl;
-	cout<<_dog.Breed<<endl;
-	cout<<_dog.Heigth<<endl;
-	cout<<_dog.Weigth<<endl;
-	cout<<_dog.Sex<<endl<<endl;
-}
+void SetPositionInFile(FILE *_file ,int _p);
+void SetPositionInEndFile(FILE *_file ,int _p);

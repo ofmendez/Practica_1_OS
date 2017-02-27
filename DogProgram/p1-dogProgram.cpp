@@ -1,35 +1,43 @@
-// #include <stdio.h>
-// #include <iostream>
-// #include <stdlib.h>
-#include "view.h"
-#include "dogType.h"
-
-
+#include "HashTable.cpp"
+#include "view.cpp"
+// #include "dogType.h"
 
 int main(){
-	// ShowMainMenu();
-	// while(UserContinue()){
-	// ListenAndGoToScreen( AskMenu() );
-	// }
+	LoadDataProgram();
 
-	FILE * dataFile;
-	dataFile = fopen("dataDogs.dat", "r");
-	if (dataFile == NULL){
-		perror("Error al leer el archivo dataDogs \n");
-		exit(-1);
+	ShowMainMenu();
+
+
+      char nameToSearch[32] = "Fabian";
+      Entry * result = table.getEntryByName(nameToSearch);
+      cout << "AQUI RESULTA: "<<result -> Name << endl;
+}
+
+void LoadDataProgram(){
+	table.Reset();
+
+	int dSize = sizeof(dogType);
+	char m[20] = "Cargando...";
+  	Entry *entry = new Entry();
+	dogType buffer;
+	FILE * dataFile = GetReadDataFile();
+
+	ShowMessage(m);
+
+
+	// HashTable table =HashTable(1721);
+
+	int index = 0;
+	while(fread((void*)&buffer,dSize,1,dataFile) ==1){
+		memcpy(entry->  Name, buffer.Name,sizeof(char[32]));
+		cout<<"__Leido__: "<<buffer.Name<<" : "<<endl;
+		table.insertEntry(entry,index);
+		index++;
+		if (index == 1000) {/* break; */}
 	}
-
-	int movedP = fseek( dataFile, 0, SEEK_SET);
-	// int movedP = fseek( dataFile, 3*sizeof(dogType), SEEK_SET);
-	if (movedP != 0){
-		perror("El reinicio del apuntador no se logró correctamente.");
-		exit(-1);
-	}
-	dogType newDog ;
-	fread((void*)&newDog,sizeof(dogType),1,dataFile);
-	DogToPrint(newDog);
-
-
-
+      // table.printTable();
+      // table.printHistogram();
+	fclose(dataFile);
+	free(entry);
 }
 

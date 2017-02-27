@@ -2,7 +2,8 @@
 #include <iostream>
 using namespace std;
 
-#include "dogType.h"
+// #include "dogType.h"
+#include "Util.h"
 #include "generator.h"
 
 int main(){
@@ -10,7 +11,8 @@ int main(){
 }
 
 void Generate() {
-	int registers = 9;
+      int registers = 9;
+	// int registers = 10000000;
  	struct dogType tmpDog;
 	char namesBase[1717][32];
 	char breedsBase[32][16];
@@ -30,30 +32,10 @@ void Generate() {
 	// dogType *aux =malloc(sizeof(dogType));
 }
 
-FILE * GetDataFile(){
-	FILE * result;
-
-	result = fopen("dataDogs.dat", "w+");
-	if (result == NULL){
-		perror("Error en la creación/apertura del archivo. \n");
-		exit(-1);
-	}
-	
-	return result;
-}
-
-void WriteDogToFile(dogType _dog, FILE * _file){
-	DogToPrint(_dog);
- 	int dataWrited;
 
 
-	dataWrited = fwrite( &_dog, sizeof( dogType), 1, _file);
-    	if (dataWrited == 0){
-    		perror("No se logró escribir la estructura al archivo \n");
-      	exit(-1);
-    }
 
-}
+
 
 
 dogType GetRandomDog(char  _namesBase[][32], char _breedsBase[][16]){
@@ -135,14 +117,5 @@ float RandomRangeF(float _min, float _max){
  	return _min + (rand() /     (  RAND_MAX /(_max -_min)       ) );
 }
 
-void DogToPrint(dogType _dog){
-	cout<<_dog.Name<<endl;
-	cout<<_dog.Type<<endl;
-	cout<<_dog.Age<<endl;
-	cout<<_dog.Breed<<endl;
-	cout<<_dog.Heigth<<endl;
-	cout<<_dog.Weigth<<endl;
-	cout<<_dog.Sex<<endl<<endl;
-}
 
 
