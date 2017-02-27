@@ -6,10 +6,13 @@
 #include "view.h"
 #include "Util.h"
 using namespace std;
-HashTable table =HashTable(13);
 
+// HashTable table =HashTable(13);
+HashTable table =HashTable(1721);  // Crea la tabla hash con N numero de espacios.
+
+//Elige qué  función desplegar dependiendo de la opción elegida por el uduario.
 void LaunchDisplay( int _v){
-	// system("clear");
+	system("clear");
 	switch (_v) {
 		case 1:
 			Display1Ingress(); break;
@@ -23,15 +26,14 @@ void LaunchDisplay( int _v){
 			Display5Exit(); break;
 	     default:
 	     		printf("ERROR!\n");
- 			// ShowMainMenu();
 	}
-
 }
 
+//Despliega el menú principal y solicita una entrada válida del usuario.
 void ShowMainMenu(){
 	char n=0;
 	do{
-		// system("clear");
+		system("clear");
 		printf("~~~~~~~VETERINARIA OFMENDEZ~~~~~~~\n");
 		printf(  "~   \t\t\t\t ~ \n");
 		printf(  "~   1. Ingresar registro.\t ~ \n");
@@ -48,17 +50,17 @@ void ShowMainMenu(){
 	LaunchDisplay((n-'0'));
 }
 
+//Espera a que oprima ENTER para continuar.
 bool UserContinue(){
 	printf("Operación finalizada...\n");
 	printf("Presione ENTER para continuar.");
 	while(getchar() != '\n');
 	printf("\n");
-	ShowMainMenu();
+	ShowMainMenu(); //Regresa al menú principal.
 }
 
-
+//Función de ingresar un registro.
 void Display1Ingress(){
-
 	printf("~~~~INGRESANDO HISTORIA CLINICA~~~\n");
 	char name[32];
 	char type[32];
@@ -86,14 +88,15 @@ void Display1Ingress(){
 	UserContinue();	
 }
 
+//Función de visualizar un registro.
 void Display2View(){
 	int n=0;
 	do{
-		// system("clear");
+		system("clear");
 		printf("~~~~~~~VETERINARIA OFMENDEZ~~~~~~~\n");
 		printf(  "~   \t\t\t\t ~ \n");
 		printf(  "~    Registrados actualmente \t ~ \n");
-		printf(  "~   \t  %i Animales.\t\t ~ \n",table.getNumberOfEntries());
+		printf(  "~   \t  %i Animales.\t\t  \n",table.getNumberOfEntries());
 		printf(  "~   \t\t\t\t ~ \n");
 		printf(  "~   \t Digita el registro \t ~ \n");
 		printf(  "~   \t  que deseas ver   \t ~ \n");
@@ -107,17 +110,18 @@ void Display2View(){
 	UserContinue();
 }
 
+//Función de Borrar un registro.
 void Display3Delete(){
 	int n=0;
 	do{
-		// system("clear");
+		system("clear");
 		printf("~~~~~~~VETERINARIA OFMENDEZ~~~~~~~\n");
 		printf(  "~   \t\t\t\t ~ \n");
 		printf(  "~    Registrados actualmente \t ~ \n");
-		printf(  "~   \t  %i Animales.\t\t ~ \n",table.getNumberOfEntries());
+		printf(  "~   \t  %i Animales.\t\t  \n",table.getNumberOfEntries());
 		printf(  "~   \t\t\t\t ~ \n");
 		printf(  "~   \t Digita el registro \t ~ \n");
-		printf(  "~   \t  que deseas  BORRAR.\t ~ \n");
+		printf(  "~   \tque deseas  BORRAR.\t ~ \n");
 		printf(  "~   \t\t\t\t ~ \n");
 		printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
 		printf("Borrar: \n");
@@ -128,77 +132,98 @@ void Display3Delete(){
 	UserContinue();
 }
 
+//Funcion de Buscar un registro.
 void Display4Search(){
-	
-      table.printTable();
+	char name[32];
+	system("clear");
+	printf("~~~~~~~VETERINARIA OFMENDEZ~~~~~~~\n");
+	printf(  "~   \t\t\t\t ~ \n");
+	printf(  "~    Registrados actualmente \t ~ \n");
+	printf(  "~   \t  %i Animales.\t\t  \n",table.getNumberOfEntries());
+	printf(  "~   \t\t\t\t ~ \n");
+	printf(  "~   \t Digita el nombre \t ~ \n");
+	printf(  "~   \tque deseas  BUSCAR.\t ~ \n");
+	printf(  "~   \t\t\t\t ~ \n");
+	printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+	printf("Buscar: \n");
+	scanf("%s",&name);
+	while (getchar()!='\n');
+	system("clear");
+	printf("RESULTADOS PARA \"%s \" : \n\n",name);
+       table.PrintAllEntriesByName( name ); //Despliega todas las entradas que coinciden con el nombre
 	UserContinue();
 }
 
+//Función salir del programa.
 void Display5Exit(){
-	char m[20] = "      ADIOS!";
-	ShowMessage(m);
+	char msg[20] = "      ADIOS!";
+	ShowMessage(msg);
 } 
 
+//Borra el registro seleccionado.
 void DeleteRegister(int _p1){
 	FILE * dataFile = GetReadDataFile();
 	dogType buffer;
-	SetPositionInEndFile(dataFile,-1);
-	fread((void*)&buffer,sizeof(dogType),1,dataFile) ;
-	SetPositionInFile(dataFile, _p1);
+
+	SetPositionInEndFile(dataFile,-1); // Va a la ultima posición del archivo.
+	fread((void*)&buffer,sizeof(dogType),1,dataFile) ;//Lee la última posición en un buffer.
+	SetPositionInFile(dataFile, _p1);   //Va a la posición que el usuario desea borrar
+	WriteDogToFile(buffer, dataFile); //Escribe el buffer en la posición para sobre-escribirla
       
-	WriteDogToFile(buffer, dataFile);
-	SetPositionInFile(dataFile, 0);
+      DeleteLastItem(dataFile);
 
-	FILE *dataFile_tmp;
-
-	dataFile_tmp=fopen("tmp.dat", "wb");
-	if (!dataFile_tmp) {
-		printf("Unable to open file temp file.");
-      		exit(-1);
-	}
-	int readed =1;
-	while (fread((void*)&buffer,sizeof(dogType),1,dataFile) == 1 && readed< table.getNumberOfEntries()) {
-		fwrite(&buffer, sizeof(dogType), 1, dataFile_tmp);
-		readed ++;
-	}
-
-	fclose(dataFile);
-	fclose(dataFile_tmp);
-
-	remove("dataDogs.dat");
-	rename("tmp.dat", "dataDogs.dat");
-	// SetPositionInEndFile(dataFile,-1);
-	// WriteDogToFile(NULL, dataFile);
-
-	// FILE * mrFile = GetMedicalRecordFile();
-	// BORRAR DE LA HASH
+	
 	LoadDataProgram();
 }
 
+//Borra el último item de un archivo.
+void DeleteLastItem(FILE * _file){
+	//Se crea un archivo de copia temporal para n-1 items
+	int limit =table.getNumberOfEntries();
+	FILE *dataFile_tmp = GetTempFile(); 
+	int sizeD =sizeof(dogType);
+	dogType buffer;
+	int readed =1;
+
+	char msg[20] = "Borrando...";
+	ShowMessage(msg); 
+
+	//Pone el apuntador al inicio del archivo para leerlo completamente
+	// excepto el último item.
+	SetPositionInFile(_file, 0);
+	while (fread((void*)&buffer,sizeD,1,_file) == 1 && readed< limit) {
+		fwrite(&buffer, sizeD, 1, dataFile_tmp);
+		readed ++;
+	}
+	//Se cierra, renombra y elimina el archivo obsoleto.
+	fclose(_file);
+	fclose(dataFile_tmp);
+	remove("dataDogs.dat");
+	rename("tmp.dat", "dataDogs.dat");
+}
+
+//Busca, Lee y despliega el registro solicitado en un .txt.
 void ViewRegister(int _p1){
 	FILE * dataFile = GetReadDataFile();
+	FILE * mrFile = GetMedicalRecordFile();
 	dogType buffer;
+	//Lleva el puntero al registro solicitado dentro del .dat.
 	SetPositionInFile(dataFile,_p1);
-
-
 	fread((void*)&buffer,sizeof(dogType),1,dataFile) ;
 
-	// FILE * mrFile = GetMedicalRecordFile();
-	FILE * mrFile;
-	mrFile = fopen("medicalRecord.txt", "w");
-	if (mrFile == NULL){
-		perror("Error en la creación/apertura del archivo. \n");
-		exit(-1);
-	}
+	//Escribe los datos de la historia clinica en el TXT, libera los archivos
 	fprintf(mrFile, "~~~~ HISTORIA CLINICA~~~~ \n \n Nombre: %s \n Tipo:   %s \n Edad:   %i \n Raza:   %s \n Altura: %i \n Peso:   %2.2f \n Sexo:   %c ",
 	buffer.Name, buffer.Type, buffer.Age, buffer.Breed, buffer.Heigth, buffer.Weigth, buffer.Sex );
 	fclose(mrFile);
+	fclose(dataFile);
+	//Abre en editor el TXT
 	system("nano medicalRecord.txt");
 }
 
+//Despliega los datos que se van a guardar y pide confirmación al usuario.
 void ConfirmDataToRegister(char _n[32], char _t[32], int _a, char _b[16], int _h, float _w, char _s ){
-// system("clear");
 	char op;
+	system("clear");
 	printf("~~~~~~ DATOS A INGRESAR ~~~~~\n");
 	printf(" nombre: %s\n",  _n);
 	printf(" tipo: \t %s\n",  _t);
@@ -207,28 +232,27 @@ void ConfirmDataToRegister(char _n[32], char _t[32], int _a, char _b[16], int _h
 	printf(" altura: %d\n",  _h);
 	printf(" peso: \t %f\n",  _w);
 	printf(" sexo: \t %c\n\n",  _s);
-
 	printf(" Registrar estos datos? (S/N): \n");
 	scanf("%c", &op); while (getchar()!='\n');
 
 	if (op == 'Y' || op == 'y' || op == 'S' || op == 's' || op == 'N' || op == 'n' ) {
 		if (op == 'N' || op == 'n') {
-			char m[20] = "Registro cancelado!";
-			ShowMessage(m);
+			char msg[20] = "Registro cancelado!";
+			ShowMessage(msg);
 		}else{
-			RegisterDog(_n, _t, _a, _b, _h, _w, _s);
+			RegisterDog(_n, _t, _a, _b, _h, _w, _s); //Guarda el nuevo registro
 		}
 	}else{
-		ConfirmDataToRegister(_n, _t, _a, _b, _h, _w, _s);
+		ConfirmDataToRegister(_n, _t, _a, _b, _h, _w, _s); //Permanece hasta que exista una entrada válida.
 	}
-
 }
 
+//Guarda el nuevo registro.
 void RegisterDog(char _n[32], char _t[32], int _a, char _b[16], int _h, float _w, char _s ){
 	dogType newDog;
   	Entry *entry = new Entry();
  	FILE * fData= GetDataFileAppend();
-
+ 	//Llena la nueva estructura con los datos que ingresó el usuario.
 	memcpy( newDog.Name , _n, sizeof(char[32])  );
 	memcpy( entry->Name , _n, sizeof(char[32])  );
 	memcpy( newDog.Type  ,  _t, sizeof(char[32]) );
@@ -237,16 +261,16 @@ void RegisterDog(char _n[32], char _t[32], int _a, char _b[16], int _h, float _w
 	newDog.Heigth  = _h;
 	newDog.Weigth = _w;
 	newDog.Sex = _s;
-	table.insertEntry(entry,table.getNumberOfEntries());
-	WriteDogToFile(newDog, fData);
+	table.insertEntry(entry,table.getNumberOfEntries());//Ingresa a la tabla hash
+	WriteDogToFile(newDog, fData);//Escribe al archivo .dat
 	fclose(fData);
-	char m[20] = "Registrado!!";
-	ShowMessage(m);
+	char msg[20] = "  Registrado!!";
+	ShowMessage(msg);
 }
 
-
+//Despliega un mensaje al usuario
 void ShowMessage(char _msg[16]){
-	// system("clear");
+	system("clear");
 	printf("~~~~~~~VETERINARIA OFMENDEZ~~~~~~~\n");
 	printf(  "~   \t\t\t\t ~ \n");
 	printf(  "~   \t\t\t\t ~ \n");
@@ -258,6 +282,7 @@ void ShowMessage(char _msg[16]){
 	printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
 } 
 
+//Establece el apuntador del archivo a la posiciń dada relativa al inicio del archivo.
 void SetPositionInFile(FILE *_file ,int _p){
       int movedP = fseek( _file, _p*sizeof(dogType), SEEK_SET);
 	if (movedP != 0){
@@ -265,6 +290,8 @@ void SetPositionInFile(FILE *_file ,int _p){
 		exit(-1);
 	}
 }
+
+//Establece el apuntador del archivo a la posiciń dada relativa al final del archivo.
 void SetPositionInEndFile(FILE *_file ,int _p){
       int movedP = fseek( _file, _p*sizeof(dogType), SEEK_END);
 	if (movedP != 0){

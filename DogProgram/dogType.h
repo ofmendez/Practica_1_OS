@@ -6,7 +6,7 @@
 	int Heigth;
 	float Weigth;
 	char Sex;
-	struct dogType *next;
+	// struct dogType *next;
 };
 
 void DogToPrint(dogType *_dog){
@@ -18,6 +18,6 @@ void DogToPrint(dogType *_dog){
 	cout<<_dog->Heigth<<endl;
 	cout<<_dog->Weigth<<endl;
 	cout<<_dog->Sex<<endl;
-	cout<<"Apunta a: "<<((_dog->next == NULL)?"nulo!!!":_dog->next->Name)<<endl;
+	// cout<<"Apunta a: "<<((_dog->next == NULL)?"nulo!!!":_dog->next->Name)<<endl;
 	cout<<"--------------------------------------"<<endl;
 }

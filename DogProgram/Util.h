@@ -23,16 +23,34 @@ FILE * GetDataFileAppend(){
 }
 
 FILE * GetReadDataFile(){
-  FILE * result;
-  result = fopen("dataDogs.dat", "rb+");
-  if (result == NULL){
-      perror("Error al leer el archivo dataDogs \n");  exit(-1);
-      exit(-1);
-  }
-  return result;
+	FILE * result;
+	result = fopen("dataDogs.dat", "rb+");
+	if (result == NULL){
+		perror("Error al leer el archivo dataDogs \n");  exit(-1);
+		exit(-1);
+	}
+	return result;
 }
 
+FILE * GetTempFile(){
+  	FILE * result;
+	result=fopen("tmp.dat", "wb");
+	if (!result) {
+		printf("Error al modificar archivo.");
+      		exit(-1);
+	}
+  	return result;
+}
 
+FILE * GetMedicalRecordFile(){
+  	FILE * result;
+	result = fopen("medicalRecord.txt", "w");
+	if (result == NULL){
+		perror("Error en la creación/apertura del archivo. \n");
+		exit(-1);
+	}
+  	return result;
+}
 void WriteDogToFile(dogType _dog, FILE * _file){
 	// DogToPrint(&_dog); //TEST
  	int dataWrited;

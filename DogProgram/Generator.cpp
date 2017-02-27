@@ -2,7 +2,6 @@
 #include <iostream>
 using namespace std;
 
-// #include "dogType.h"
 #include "Util.h"
 #include "generator.h"
 
@@ -11,8 +10,8 @@ int main(){
 }
 
 void Generate() {
-      int registers = 9;
-	// int registers = 10000000;
+      // int registers = 50;
+	int registers = 10000000;
  	struct dogType tmpDog;
 	char namesBase[1717][32];
 	char breedsBase[32][16];
@@ -32,12 +31,6 @@ void Generate() {
 	// dogType *aux =malloc(sizeof(dogType));
 }
 
-
-
-
-
-
-
 dogType GetRandomDog(char  _namesBase[][32], char _breedsBase[][16]){
 	dogType result;
 	char type[32] = "Perro"; 
@@ -51,8 +44,6 @@ dogType GetRandomDog(char  _namesBase[][32], char _breedsBase[][16]){
 	result.Sex = rand()%2 == 1?'F':'M';
 	return result;
 }
-
-
 
 void LoadBreedsBase(char _breed[][16]){
   	// char  breeds[32][16];
@@ -100,7 +91,6 @@ void LoadNamesBase(char _names[][32]){
       if(ap == NULL ){
       	perror ("Error al abrir el archivo");  exit(-1);
       }	
-
     	for (int i = 0; i < 1717; ++i) {
 	 	fgets(buffer , 32,  ap);
 	 	buffer[strcspn(buffer, "\n")] = 0;

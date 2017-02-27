@@ -1,9 +1,9 @@
 ~~~~ HISTORIA CLINICA~~~~ 
  
- Nombre: Fabian 
- Tipo:   44 
- Edad:   44 
- Raza:   44 
- Altura: 44 
- Peso:   44.00 
- Sexo:   M 
+ Nombre: Faustino 
+ Tipo:   Perro 
+ Edad:   14 
+ Raza:   Chow Chow 
+ Altura: 81 
+ Peso:   15.63 
+ Sexo:   F 
