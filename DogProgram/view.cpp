@@ -14,16 +14,11 @@ HashTable table =HashTable(1721);  // Crea la tabla hash con N numero de espacio
 void LaunchDisplay( int _v){
 	system("clear");
 	switch (_v) {
-		case 1:
-			Display1Ingress(); break;
-		case 2:
-			Display2View(); break;
-		case 3:
-			Display3Delete(); break;
-		case 4:
-			Display4Search(); break;
-		case 5:
-			Display5Exit(); break;
+		case 1: Display1Ingress(); break;
+		case 2: Display2View(); break;
+		case 3: Display3Delete(); break;
+		case 4: Display4Search(); break;
+		case 5: Display5Exit(); break;
 	     default:
 	     		printf("ERROR!\n");
 	}
@@ -59,6 +54,10 @@ bool UserContinue(){
 	ShowMainMenu(); //Regresa al menú principal.
 }
 
+// *********************************************
+// *******             DISPLAYS             *************
+// *********************************************
+
 //Función de ingresar un registro.
 void Display1Ingress(){
 	printf("~~~~INGRESANDO HISTORIA CLINICA~~~\n");
@@ -69,20 +68,13 @@ void Display1Ingress(){
 	int heigth;
 	float weigth;
 	char sex;
-	printf("Ingresa el nombre: \n");
-	scanf("%s", &name); while (getchar()!='\n');
-	printf("Ingresa el tipo: \n");
-	scanf("%s", &type); while (getchar()!='\n');
-	printf("Ingresa la edad: \n");
-	scanf("%i", &age); while (getchar()!='\n');
-	printf("Ingresa la raza: \n");
-	scanf("%s", &breed); while (getchar()!='\n');
-	printf("Ingresa la altura(cm): \n");
-	scanf("%i", &heigth); while (getchar()!='\n');
-	printf("Ingresa la peso(Kg): \n");
-	scanf("%f", &weigth); while (getchar()!='\n');
-	printf("Ingresa la sexo(F/M): \n");
-	scanf("%c", &sex); while (getchar()!='\n');
+	printf("Ingresa el nombre: \n"); scanf("%s", &name); while (getchar()!='\n');
+	printf("Ingresa el tipo: \n"); scanf("%s", &type); while (getchar()!='\n');
+	printf("Ingresa la edad: \n"); scanf("%i", &age); while (getchar()!='\n');
+	printf("Ingresa la raza: \n"); scanf("%s", &breed); while (getchar()!='\n');
+	printf("Ingresa la altura(cm): \n"); scanf("%i", &heigth); while (getchar()!='\n');
+	printf("Ingresa la peso(Kg): \n"); scanf("%f", &weigth); while (getchar()!='\n');
+	printf("Ingresa la sexo(F/M): \n"); scanf("%c", &sex); while (getchar()!='\n');
 	sex = (sex =='F' || sex =='f')?'F' :'M';
 	ConfirmDataToRegister(name, type, age, breed, heigth, weigth, sex);
 	UserContinue();	
@@ -159,6 +151,10 @@ void Display5Exit(){
 	char msg[20] = "      ADIOS!";
 	ShowMessage(msg);
 } 
+// *********************************************
+// *******             END DISPLAYS             ********
+// *********************************************
+
 
 //Borra el registro seleccionado.
 void DeleteRegister(int _p1){
@@ -171,35 +167,29 @@ void DeleteRegister(int _p1){
 	WriteDogToFile(buffer, dataFile); //Escribe el buffer en la posición para sobre-escribirla
       
       DeleteLastItem(dataFile);
-
 	
 	LoadDataProgram();
+	char msg[20] = "Hecho...";
+	ShowMessage(msg); 
 }
 
 //Borra el último item de un archivo.
 void DeleteLastItem(FILE * _file){
-	//Se crea un archivo de copia temporal para n-1 items
-	int limit =table.getNumberOfEntries();
-	FILE *dataFile_tmp = GetTempFile(); 
-	int sizeD =sizeof(dogType);
-	dogType buffer;
-	int readed =1;
-
+	int finalSize =table.getNumberOfEntries()-1  ; //Items del nuevo archivo
+	printf("Es: %i\n", finalSize);
 	char msg[20] = "Borrando...";
 	ShowMessage(msg); 
 
-	//Pone el apuntador al inicio del archivo para leerlo completamente
-	// excepto el último item.
-	SetPositionInFile(_file, 0);
-	while (fread((void*)&buffer,sizeD,1,_file) == 1 && readed< limit) {
-		fwrite(&buffer, sizeD, 1, dataFile_tmp);
-		readed ++;
+	SetPositionInFile(_file,0);
+	//Trunca el archivo eliminando el último registro
+	if (ftruncate(fileno(_file), finalSize *sizeof(dogType) ) != 0){ 
+		perror("Error en el borrado del registro. \n");
+		exit(-1);
+	}else{
+		// cout <<"HRY";
+		// cin>>r;
 	}
-	//Se cierra, renombra y elimina el archivo obsoleto.
 	fclose(_file);
-	fclose(dataFile_tmp);
-	remove("dataDogs.dat");
-	rename("tmp.dat", "dataDogs.dat");
 }
 
 //Busca, Lee y despliega el registro solicitado en un .txt.

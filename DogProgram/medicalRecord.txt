@@ -1,9 +1,9 @@
 ~~~~ HISTORIA CLINICA~~~~ 
  
- Nombre: Faustino 
+ Nombre: Florencio 
  Tipo:   Perro 
- Edad:   14 
+ Edad:   15 
  Raza:   Chow Chow 
- Altura: 81 
- Peso:   15.63 
+ Altura: 62 
+ Peso:   27.57 
  Sexo:   F 

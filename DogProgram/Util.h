@@ -51,6 +51,7 @@ FILE * GetMedicalRecordFile(){
 	}
   	return result;
 }
+
 void WriteDogToFile(dogType _dog, FILE * _file){
 	// DogToPrint(&_dog); //TEST
  	int dataWrited;
