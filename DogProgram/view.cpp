@@ -8,7 +8,8 @@
 using namespace std;
 
 // HashTable table =HashTable(13);
-HashTable table =HashTable(1721);  // Crea la tabla hash con N numero de espacios.
+HashTable table =HashTable();  // Crea la tabla hash con N numero de espacios.
+// HashTable *table ;
 
 //Elige qué  función desplegar dependiendo de la opción elegida por el uduario.
 void LaunchDisplay( int _v){
@@ -27,9 +28,10 @@ void LaunchDisplay( int _v){
 //Despliega el menú principal y solicita una entrada válida del usuario.
 void ShowMainMenu(){
 	char n=0;
+	// cout<<"es: "<<sizeof(LinkedList);
 	do{
 		system("clear");
-		printf("~~~~~~~VETERINARIA OFMENDEZ~~~~~~~\n");
+		printf("~~~~~~~VETERINARIA OFMENDEZ ~~~~~~~\n");
 		printf(  "~   \t\t\t\t ~ \n");
 		printf(  "~   1. Ingresar registro.\t ~ \n");
 		printf(  "~   2. Ver registro.\t\t ~ \n");
@@ -240,18 +242,18 @@ void ConfirmDataToRegister(char _n[32], char _t[32], int _a, char _b[16], int _h
 //Guarda el nuevo registro.
 void RegisterDog(char _n[32], char _t[32], int _a, char _b[16], int _h, float _w, char _s ){
 	dogType newDog;
-  	Entry *entry = new Entry();
+  	// Entry *entry = new Entry();
  	FILE * fData= GetDataFileAppend();
  	//Llena la nueva estructura con los datos que ingresó el usuario.
 	memcpy( newDog.Name , _n, sizeof(char[32])  );
-	memcpy( entry->Name , _n, sizeof(char[32])  );
+	// memcpy( entry->Name , _n, sizeof(char[32])  );
 	memcpy( newDog.Type  ,  _t, sizeof(char[32]) );
 	newDog.Age = _a;
 	memcpy(newDog.Breed  , _b, sizeof(char[16]) );
 	newDog.Heigth  = _h;
 	newDog.Weigth = _w;
 	newDog.Sex = _s;
-	table.insertEntry(entry,table.getNumberOfEntries());//Ingresa a la tabla hash
+	table.insertEntry(_n,table.getNumberOfEntries());//Ingresa a la tabla hash
 	WriteDogToFile(newDog, fData);//Escribe al archivo .dat
 	fclose(fData);
 	char msg[20] = "  Registrado!!";

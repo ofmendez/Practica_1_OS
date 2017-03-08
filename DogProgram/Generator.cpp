@@ -10,8 +10,9 @@ int main(){
 }
 
 void Generate() {
-      // int registers = 9;
-	int registers = 10000000;
+      // int registers = 1;
+      int registers = 1000000;
+	// int registers = 10000000;
  	struct dogType tmpDog;
 	char namesBase[1717][32];
 	char breedsBase[32][16];

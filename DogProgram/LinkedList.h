@@ -8,8 +8,8 @@ using namespace std;
 
 struct Entry {
     char Name[32];
-    int index;
     Entry * next;
+    int index;
 };
 
 class LinkedList {
@@ -39,6 +39,8 @@ public:
     void printList();
     
     int getLength();
+    
+    void Clear();
 
     ~LinkedList();
 

@@ -1,9 +1,9 @@
 ~~~~ HISTORIA CLINICA~~~~ 
  
- Nombre: Florencio 
+ Nombre: Boris 
  Tipo:   Perro 
- Edad:   15 
- Raza:   Chow Chow 
- Altura: 62 
- Peso:   27.57 
+ Edad:   9 
+ Raza:   Fox Terrier 
+ Altura: 67 
+ Peso:   29.58 
  Sexo:   F 

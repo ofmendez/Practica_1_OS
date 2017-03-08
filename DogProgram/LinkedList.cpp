@@ -4,7 +4,7 @@
 //Inicializa una lista vacía creando el espacio para el nodo principal, la "cabeza" de la lista 
 LinkedList::LinkedList() {
     head = new Entry();
-    last = new Entry();
+     last = head;
     head -> next = NULL;
     last -> next = NULL;
     length = 0;
@@ -71,7 +71,7 @@ void LinkedList::PrintAllEntries(char _name[32]){
 
 //Desplega el contenido de la lista
 void LinkedList::printList() {
-    if (length == 0) {
+    if (getLength() == 0) {
         cout << "\n{ }\n";
         return;
     }
@@ -81,7 +81,7 @@ void LinkedList::printList() {
     while (q) {
         p = q;
         if (p != head) {
-            cout << p -> index<<"-"<< p -> Name;
+            // cout << p -> index<<"-"<< p -> Name;
             // cout << p -> Name;
             if (p -> next) cout << ", ";
             else cout << " ";
@@ -92,7 +92,32 @@ void LinkedList::printList() {
 }
 
 int LinkedList::getLength() {
+    // int result =0;
+    // Entry * p = head;
+    // Entry * q = head;
+    // while (q) {
+    //     p = q;
+    //     if (p != head) 
+    //         result ++;
+
+    //     q = p -> next;
+    // }
+    // return result;
     return length;
+}
+
+void LinkedList::Clear() {
+    Entry * p = head;
+    Entry * q = head;
+    while (q) {
+        p = q;
+        q = p -> next;
+        if (p != head && q) 
+            free(p);
+    }
+    head -> next = NULL;
+    last -> next = NULL;
+    length =0;
 }
 
 LinkedList::~LinkedList() {
@@ -101,7 +126,7 @@ LinkedList::~LinkedList() {
     while (q) {
         p = q;
         q = p -> next;
-        if (q) delete p;
+        if (q) free (p);
     }
 }
 

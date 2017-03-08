@@ -4,11 +4,11 @@
 
 
 //Constructor del objeto HashTable.
-HashTable::HashTable( int _tableLength ) {
-    if (_tableLength <= 0) 
-        _tableLength = 13;
-    headsArray = new LinkedList[ _tableLength ];
-    tableLength = _tableLength;
+HashTable::HashTable(  ) {
+    // if (_tableLength <= 0) 
+    //     _tableLength = 13;
+    // headsArray =  LinkedList[ _tableLength ];
+    // tableLength = _tableLength;
 }
 
 
@@ -28,16 +28,24 @@ int HashTable::hash( char _name[32] ) {
 
 //Limpia la tabla hash.
 void HashTable::Reset() {
-    delete [] headsArray;
-    headsArray = new LinkedList[ tableLength ];
+    // delete [] headsArray;
+    // headsArray = new LinkedList[ tableLength ];
+    // headsArray =  LinkedList[ tableLength ];
+}
+
+void HashTable::Clear() {
+    for ( int i = 0; i < tableLength; i++ ) {
+            headsArray[i].Clear();
+    }
 }
 
 //Agrega un item a la tabla hash.
-void HashTable::insertEntry( Entry * _newEntry , int _index) {
-    int h = hash( _newEntry -> Name ); //Calcula la posición h a ubicarlo
+void HashTable::insertEntry( char _name[32] , int _index) {
+    int h = hash( _name); //Calcula la posición h a ubicarlo
     // cout << " "<<h<<" "<<endl;
     Entry * newEntry = new Entry();
-    memcpy(newEntry,_newEntry,sizeof(Entry));
+    memcpy(newEntry->  Name, _name,sizeof(char[32]));
+    // memcpy(newEntry,_newEntry,sizeof(Entry));
     newEntry->index = _index;
     headsArray[ h ].insertEntry( newEntry );// Lo agrega a la lista h.
 }
@@ -106,6 +114,7 @@ int HashTable::getNumberOfEntries() {
 
 // Destructor
 HashTable::~HashTable() {
-    delete [] headsArray;
+    Clear();
+    // headsArray={};
 }
 

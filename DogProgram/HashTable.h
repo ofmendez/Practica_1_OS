@@ -2,26 +2,28 @@
 #define HashTable_h
 
 #include "LinkedList.cpp"
+#define tableLength  1721
+// #define tableLength  2
 
 class HashTable {
 private:
     
+    // LinkedList * headsArray;
     // La tabla es conformada por un arreglo de listas enlazadas
-    LinkedList * headsArray;
-    int tableLength;
+    LinkedList headsArray[ tableLength ];
 
     //Retorna una posición para un item dado.
     int hash( char _name[32] );
     
 public:
     
-    HashTable( int _tableLength  );
+    HashTable( );
     
     //Limpia la tabla hash.
     void Reset() ;
     
     //Agrega un item a la tabla hash.
-    void insertEntry( Entry * _newEntry , int _index);
+    void insertEntry( char _name[32] , int _index);
     
     bool removeEntry( char _name[32] );
     
@@ -42,7 +44,11 @@ public:
     // Retorna el número de items total que existen en la tabla
     int getNumberOfEntries();
     
+    void Clear() ;
+    
     ~HashTable();
+
+
 };
 
 #endif
