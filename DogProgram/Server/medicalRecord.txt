@@ -1,0 +1,9 @@
+~~~~ HISTORIA CLINICA~~~~ 
+ 
+ Nombre: Ruper 
+ Tipo:   Perro 
+ Edad:   5 
+ Raza:   Alzawakh 
+ Altura: 47 
+ Peso:   28.30 
+ Sexo:   F 

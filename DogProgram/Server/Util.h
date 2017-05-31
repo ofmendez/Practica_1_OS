@@ -1,4 +1,5 @@
 #include "dogType.h"
+// #include "packageInfo.cpp"
 
 FILE * GetDataFile(){
 	FILE * result;
@@ -44,7 +45,7 @@ FILE * GetTempFile(){
 
 FILE * GetMedicalRecordFile(){
   	FILE * result;
-	result = fopen("medicalRecord.txt", "w");
+	result = fopen("medicalRecord.txt", "w+");
 	if (result == NULL){
 		perror("Error en la creación/apertura del archivo. \n");
 		exit(-1);

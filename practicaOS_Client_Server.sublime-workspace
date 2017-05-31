@@ -1,0 +1,973 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"tr",
+				"THREADS"
+			],
+			[
+				"ma",
+				"matriz"
+			],
+			[
+				"vec",
+				"vectorResultados"
+			],
+			[
+				"m",
+				"m\tmethod"
+			],
+			[
+				"S",
+				"SCRIPT"
+			],
+			[
+				"SCR",
+				"SCRIPTPATH"
+			],
+			[
+				"s",
+				"split"
+			],
+			[
+				"str",
+				"string"
+			],
+			[
+				"file",
+				"fileResut"
+			],
+			[
+				"bu",
+				"buffer"
+			],
+			[
+				"size",
+				"sizeStAddr"
+			],
+			[
+				"Dog",
+				"dogType"
+			],
+			[
+				"data",
+				"dataUser"
+			],
+			[
+				"my",
+				"myDesc"
+			],
+			[
+				"a",
+				"attend"
+			],
+			[
+				"de",
+				"descr"
+			],
+			[
+				"DMS",
+				"DMSA"
+			],
+			[
+				"DM",
+				"DMSA"
+			],
+			[
+				"len",
+				"lenStd"
+			],
+			[
+				"bre",
+				"breakN"
+			],
+			[
+				"brea",
+				"breakN"
+			],
+			[
+				"las",
+				"lastItem"
+			],
+			[
+				"A",
+				"Aitems"
+			],
+			[
+				"Ca",
+				"cases"
+			],
+			[
+				"in",
+				"inf"
+			],
+			[
+				"cor",
+				"corteSup"
+			],
+			[
+				"pt",
+				"pthread_create"
+			],
+			[
+				"ta",
+				"tableb"
+			],
+			[
+				"ha",
+				"HashTable"
+			],
+			[
+				"tab",
+				"table"
+			],
+			[
+				"E",
+				"Entry"
+			],
+			[
+				"fin",
+				"finalSize"
+			],
+			[
+				"cli",
+				"clientSocketFd"
+			],
+			[
+				"for",
+				"for\tFor Loop"
+			],
+			[
+				"ms",
+				"msgPt"
+			],
+			[
+				"client",
+				"clientFd"
+			],
+			[
+				"clien",
+				"clientFd"
+			],
+			[
+				"clie",
+				"clientFd"
+			],
+			[
+				"siz",
+				"size_t"
+			],
+			[
+				"ser",
+				"serverSocketFd"
+			],
+			[
+				"sock",
+				"sockaddr_in"
+			],
+			[
+				"mem",
+				"memId"
+			],
+			[
+				"DEle",
+				"DeleteLastItem"
+			],
+			[
+				"DE",
+				"DeleteRegister"
+			],
+			[
+				"Dis",
+				"Display1Ingress"
+			],
+			[
+				"con",
+				"ConfirmDataToRegister"
+			],
+			[
+				"se",
+				"sex"
+			],
+			[
+				"ds",
+				"dSize32"
+			],
+			[
+				"Ha",
+				"HashTable"
+			],
+			[
+				"resu",
+				"results"
+			],
+			[
+				"new",
+				"newEntry"
+			],
+			[
+				"nA",
+				"Name"
+			],
+			[
+				"na",
+				"Name"
+			],
+			[
+				"EN",
+				"entry"
+			],
+			[
+				"en",
+				"entry"
+			],
+			[
+				"has",
+				"hash"
+			],
+			[
+				"_",
+				"_name"
+			],
+			[
+				"co",
+				"cout"
+			],
+			[
+				"strin",
+				"StringToUpper"
+			],
+			[
+				"String",
+				"string"
+			],
+			[
+				"string",
+				"StringToUpper"
+			],
+			[
+				"name",
+				"nameToSearch"
+			],
+			[
+				"hash",
+				"HashItem"
+			],
+			[
+				"_m",
+				"_min"
+			],
+			[
+				"Load",
+				"LoadBreedsBase"
+			],
+			[
+				"Bre",
+				"breedBase"
+			],
+			[
+				"ran",
+				"rand"
+			],
+			[
+				"Loa",
+				"LoadNamesBase"
+			],
+			[
+				"re",
+				"result"
+			],
+			[
+				"c",
+				"cout"
+			],
+			[
+				"nam",
+				"namesBase"
+			],
+			[
+				"get",
+				"getchar"
+			],
+			[
+				"pip",
+				"mPipeFd"
+			],
+			[
+				"pi",
+				"mPipeFd"
+			],
+			[
+				"rea",
+				"readed"
+			],
+			[
+				"Cal",
+				"CalcFromParent"
+			],
+			[
+				"fr",
+				"fromSon"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "DogProgram/Server/p2-dogServer.cpp",
+			"settings":
+			{
+				"buffer_size": 4398,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "DogProgram/Client/view.cpp",
+			"settings":
+			{
+				"buffer_size": 9890,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/C++/C++ Single File.sublime-build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/C++/C++ Single File.sublime-build",
+				"Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				],
+				[
+					"Packages/User/FilesConfOfmendez/groovy.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/C++/C++ Single File.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/FilesConfOfmendez/groovy.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/C++/C++ Single File.sublime-build",
+				"Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				],
+				[
+					"Packages/User/FilesConfOfmendez/MyPython (1).sublime-build",
+					""
+				],
+				[
+					"Packages/User/FilesConfOfmendez/MyPython (1).sublime-build",
+					"Syntax Check"
+				],
+				[
+					"Packages/User/FilesConfOfmendez/MyPython.sublime-build",
+					""
+				],
+				[
+					"Packages/User/FilesConfOfmendez/MyPython.sublime-build",
+					"Syntax Check"
+				],
+				[
+					"Packages/User/FilesConfOfmendez/groovy.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/User/FilesConfOfmendez/MyPython (1).sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				],
+				[
+					"Packages/User/FilesConfOfmendez/MyPython (1).sublime-build",
+					""
+				],
+				[
+					"Packages/User/FilesConfOfmendez/MyPython (1).sublime-build",
+					"Syntax Check"
+				],
+				[
+					"Packages/User/FilesConfOfmendez/MyPython.sublime-build",
+					""
+				],
+				[
+					"Packages/User/FilesConfOfmendez/MyPython.sublime-build",
+					"Syntax Check"
+				],
+				[
+					"Packages/User/FilesConfOfmendez/groovy.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/User/FilesConfOfmendez/MyPython (1).sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "i",
+		"selected_items":
+		[
+			[
+				"i",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 458.0
+	},
+	"console":
+	{
+		"height": 195.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/fabian/OS/Practica_1_OS/DogProgram/Client",
+		"/home/fabian/OS/Practica_1_OS/DogProgram/Server"
+	],
+	"file_history":
+	[
+		"/usr/bin/ofpt",
+		"/home/fabian/OS/Practica_1_OS/DogProgram/Server/ofpt",
+		"/home/fabian/MY_PROJECTS/gaussJordan/gj.cpp",
+		"/home/fabian/MY_PROJECTS/gaussJordan/SuperSociologo.txt",
+		"/home/fabian/MY_PROJECTS/gaussJordan/SuperSociologoSistemasDeEc.txt",
+		"/home/fabian/MY_PROJECTS/gaussJordan/sociologo.txt",
+		"/home/fabian/Modelos/ExcelResult.csv",
+		"/home/fabian/Modelos/fileFormater.cpp",
+		"/home/fabian/Modelos/SCRIPT.sh",
+		"/home/fabian/.gitconfigBAK",
+		"/home/fabian/.gitconfig",
+		"/home/fabian/Modelos/README.md",
+		"/home/fabian/Modelos/CronCommand.txt",
+		"/home/fabian/Modelos/RESULTexcel.csv",
+		"/home/fabian/Modelos/RESULT.txt",
+		"/home/fabian/Modelos/bicirrun.bogota.unal.edu.co/existencias.php",
+		"/home/fabian/Modelos/bicirrun.bogota.unal.edu.co/index.html",
+		"/home/fabian/Modelos/bicirrun.bogota.unal.edu.co/RESULTADO.txt",
+		"/home/fabian/OS/Practica_1_OS/DogProgram/Client/Util.h",
+		"/home/fabian/OS/Practica_1_OS/DogProgram/Client/view.cpp",
+		"/home/fabian/OS/Practica_1_OS/DogProgram/Client/p2-dogClient.cpp",
+		"/home/fabian/OS/Client/Client.cpp",
+		"/home/fabian/OS/Server/Server.cpp",
+		"/home/fabian/OS/Practica_1_OS/DogProgram/Server/p2-dogServer.cpp",
+		"/home/fabian/OS/Threads/Thread.cpp",
+		"/home/fabian/OS/Practica_1_OS/DogProgram/Client/view.h",
+		"/home/fabian/OS/Client/Server.cpp",
+		"/home/fabian/OS/Practica_1_OS/DogProgram/Generator.cpp",
+		"/home/fabian/OS/Practica_1_OS/DogProgram/LinkedList.h",
+		"/home/fabian/OS/Practica_1_OS/DogProgram/LinkedList.cpp",
+		"/home/fabian/OS/Practica_1_OS/DogProgram/HashTable.h",
+		"/home/fabian/OS/Practica_1_OS/DogProgram/HashTable.cpp",
+		"/home/fabian/OS/Practica_1_OS/DogProgram/view.cpp",
+		"/home/fabian/OS/Practica_1_OS/DogProgram/p1-dogProgram.cpp",
+		"/home/fabian/OS/Practica_1_OS/DogProgram/view.h",
+		"/home/fabian/FiniteStateMachineDesigner/src/main/fsm.js",
+		"/home/fabian/MY_PROJECTS/FsmDesigner/src/elements/node.js",
+		"/home/fabian/MY_PROJECTS/FsmDesigner/src/main/fsm.js",
+		"/home/fabian/MY_PROJECTS/FsmDesigner/build.py",
+		"/home/fabian/MY_PROJECTS/FsmDesigner/www/index.html",
+		"/home/fabian/FiniteStateMachineDesigner/src/export_as/latex.js",
+		"/home/fabian/FiniteStateMachineDesigner/src/export_as/svg.js",
+		"/home/fabian/MY_PROJECTS/FsmDesigner/www/fsm.js",
+		"/home/fabian/FiniteStateMachineDesigner/src/elements/node.js",
+		"/home/fabian/FiniteStateMachineDesigner/www/index.html",
+		"/home/fabian/FiniteStateMachineDesigner/build.py",
+		"/home/fabian/.config/sublime-text-3/Packages/User/FilesConfOfmendez/MyPython (1).sublime-build",
+		"/home/fabian/.config/sublime-text-3/Packages/User/FilesConfOfmendez/MyPython.sublime-build",
+		"/home/fabian/.config/sublime-text-3/Packages/SublimeREPL/SublimeREPL.sublime-settings",
+		"/home/fabian/.config/sublime-text-3/Packages/User/SublimeREPL.sublime-settings",
+		"/home/fabian/OS/Semaphore/Semaphore.cpp",
+		"/home/fabian/OS/Semaphore/SemaphoreMod.cpp",
+		"/home/fabian/OS/Semaphore/SemaphoreClass.cpp",
+		"/home/fabian/.config/sublime-text-3/Packages/Trello/README.md",
+		"/home/fabian/Ironhacks/d3js_projects/project_1.html",
+		"/home/fabian/FiniteStateMachineDesigner/src/main/save.js",
+		"/home/fabian/FiniteStateMachineDesigner/src/main/math.js",
+		"/home/fabian/FiniteStateMachineDesigner/src/elements/temporary_link.js",
+		"/home/fabian/FiniteStateMachineDesigner/src/elements/start_link.js",
+		"/home/fabian/FiniteStateMachineDesigner/src/elements/self_link.js",
+		"/home/fabian/FiniteStateMachineDesigner/src/elements/link.js",
+		"/home/fabian/FiniteStateMachineDesigner/src/_license.js",
+		"/home/fabian/OS/RepasoPArcial/reader.cpp",
+		"/home/fabian/OS/RepasoPArcial/writer.cpp",
+		"/home/fabian/Ironhacks/prueba.txt",
+		"/home/fabian/FiniteStateMachineDesigner/www/fsm.js",
+		"/home/fabian/FiniteStateMachineDesigner/README.md",
+		"/home/fabian/OS/vacia-> lectura bloqueante hasta que haya un dato",
+		"/home/fabian/OS/Forking/forking.cpp",
+		"/home/fabian/OS/Pipe/pipe.cpp",
+		"/home/fabian/OS/MemoriaCompartida/MemoriaComp.cpp",
+		"/home/fabian/OS/Leibniz/Leibniz.cpp",
+		"/home/fabian/OS/claseSincronizacion.txt",
+		"/home/fabian/OS/PiWithSharedMem/PiWithShareMem.cpp",
+		"/home/fabian/CodeJam/CodeJam2012/RecycledNumbers/RecycledNumbers.py",
+		"/home/fabian/OS/RepasoPArcial/RepasoPArcial.txt",
+		"/home/fabian/CodeJam/CodeJam2012/RecycledNumbers/input.in",
+		"/home/fabian/CodeJam/CodeJam2012/RecycledNumbers/out.out",
+		"/home/fabian/Downloads/C-large-practice.in",
+		"/home/fabian/CodeJam/CodeJam2012/DancingWiththeGooglers/DancingWiththeGooglers.py",
+		"/home/fabian/Downloads/C-small-practice.in",
+		"/home/fabian/CodeJam/CodeJam2012/SpeakingInTongues/SpeakingInTongues.py",
+		"/home/fabian/OS/Threads/Thread",
+		"/home/fabian/OS/Pipe/piWithPipe.cpp",
+		"/home/fabian/OS/FileManager/fileManager.c",
+		"/home/fabian/.gitconfigPROXY",
+		"/home/fabian/Downloads/C-small-practice (4).in",
+		"/etc/default/hostapd",
+		"/media/fabian/Win7ssd/Documents and Settings/OFmendez/Google Drive/UNAL/00ACTUAL/ALGORITMOS/SEM1/APORB/aporb.py",
+		"/media/fabian/Win7ssd/Documents and Settings/OFmendez/Google Drive/UNAL/00ACTUAL/ALGORITMOS/SEM9/EJ1/pinguinos.py",
+		"/home/fabian/Downloads/C-small-practice (7).in",
+		"/home/fabian/Downloads/C-large-practice (4).in",
+		"/home/fabian/Downloads/C-large-practice (3).in",
+		"/home/fabian/Downloads/C-small-practice (6).in",
+		"/home/fabian/Downloads/C-small-practice (5).in",
+		"/home/fabian/Downloads/C-small-practice (2).in",
+		"/home/fabian/Downloads/C-large-practice (2).in",
+		"/home/fabian/Downloads/C-small-practice (1).in",
+		"/home/fabian/Downloads/C-large-practice (1).in",
+		"/home/fabian/OS/Practica_1_OS/DogProgramVector/dogType.h",
+		"/home/fabian/CodeJam/CodeJam2012/DancingWiththeGooglers/input.in",
+		"/home/fabian/Downloads/B-small-practice.in",
+		"/home/fabian/Downloads/B-large-practice.in",
+		"/home/fabian/CodeJam/CodeJam2012/DancingWiththeGooglers/out.out",
+		"/home/fabian/Downloads/B-small-practice (1).in",
+		"/home/fabian/example.cpp",
+		"/home/fabian/Downloads/A-small-practice.in",
+		"/home/fabian/OS/Practica_1_OS/DogProgramVector/Util.h",
+		"/home/fabian/OS/Practica_1_OS/DogProgramVector/LinkedList.h",
+		"/etc/profile",
+		"/home/fabian/.profile",
+		"/home/fabian/.bashrc",
+		"/home/fabian/.zshrc",
+		"/home/fabian/OS/Practica_1_OS/DogProgramVector/LinkedList.cpp",
+		"/home/fabian/OS/Practica_1_OS/DogProgramVector/p1-dogProgram.cpp",
+		"/home/fabian/OS/Practica_1_OS/DogProgramVector/HashTable.h",
+		"/home/fabian/OS/Practica_1_OS/DogProgramVector/HashTable.cpp",
+		"/home/fabian/OS/Practica_1_OS/DogProgramVector/view.h",
+		"/home/fabian/OS/Practica_1_OS/DogProgramVector/view.cpp",
+		"/home/fabian/OS/Practica_1_OS/DogProgramVector/generator.h",
+		"/home/fabian/OS/Practica_1_OS/DogProgramVector/Generator.cpp",
+		"/home/fabian/OS/Practica_1_OS/DogProgram/Util.h",
+		"/home/fabian/OS/Threads/class.txt",
+		"/home/fabian/OS/Threads/of",
+		"/home/fabian/OS/Practica_1_OS/DogProgram/generator.h",
+		"/home/fabian/OS/Practica_1_OS/DogProgram/dogType.h",
+		"/home/fabian/OS/esteMan/HashTable.cpp",
+		"/home/fabian/TeoriaDeLaComputacion/DFAdownload.py"
+	],
+	"find":
+	{
+		"height": 36.0
+	},
+	"find_in_files":
+	{
+		"height": 102.0,
+		"where_history":
+		[
+			"<open folders>",
+			"/home/fabian/MY_PROJECTS/FsmDesigner",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"IP",
+			"ip",
+			"ViewState",
+			"ved ;\n\t// int rc = recv (_clientFd , &dogReceived  , sizeof(dogType)+1, 0);\n //      printf(\"Recieve =%i\\n\",rc); \n //     \tif (rc<=0)\n //      \tbreak;\n\t// printf(\" El cliente ",
+			"WaitState",
+			"-",
+			"---------------------------------------------------------------",
+			"]);",
+			"A",
+			"ord",
+			"`",
+			"\\t",
+			"bilidad_izq\">",
+			"sponibilidad_izq\"",
+			"26",
+			"calle",
+			"client",
+			"data",
+			"Data",
+			"data",
+			"Data",
+			"data",
+			"_data",
+			"Function",
+			"sockaddr",
+			"client",
+			"server",
+			"/*--",
+			"size",
+			"Size",
+			"size",
+			"Size",
+			"size",
+			"sizeCli",
+			"inse",
+			"client",
+			"RegisterDog",
+			"ConfirmDataToRegister",
+			"attend",
+			"fabian",
+			"];\n",
+			"dataUser",
+			"ap",
+			"dataType",
+			"hilo",
+			"i",
+			"crossBrowserKey",
+			"20",
+			"red",
+			"blue",
+			"deltaMouseX",
+			"movingObject",
+			"snapNode",
+			"snapToPadding",
+			"selectObject",
+			"snapNode",
+			"deltaMouseX",
+			"deltaMo",
+			"deltaMouseX",
+			"movingObject",
+			"shift",
+			"selectObject",
+			"convertLatexShortcuts",
+			"50",
+			"nodeRadius",
+			"convertLatexShortcuts",
+			"drawtext",
+			"nodes",
+			"drawText",
+			"selectObject",
+			"crossBrowserMousePos",
+			"crossBrowserElementPos",
+			"crossBrowserRelativeMousePos",
+			"setInterval",
+			"canvasHasFocus",
+			"drawUsing",
+			"draw",
+			"btoa",
+			"canvas",
+			"originalClick",
+			"canvas",
+			"semaforo_name",
+			"type",
+			"typed",
+			"*/\n",
+			"[",
+			"$ \\Phi $",
+			"\\{q_{}\\",
+			"~,~",
+			"not\\in",
+			"F^∁",
+			"$$_",
+			"$q_1$$_8$",
+			"_1_",
+			",",
+			"len(As)",
+			"0",
+			"A",
+			"intermedios",
+			"SetPositionInFile",
+			"#",
+			"count",
+			"// system(\"clear\");",
+			"tableb->",
+			"table->",
+			"ShowMainMenu",
+			"&mtable",
+			"HashTable *_t",
+			"table",
+			"table.",
+			"getNumberOfEntries",
+			"table.getNumberOfEntries",
+			"table.",
+			"HashTable",
+			"table",
+			"HashTable",
+			"table",
+			"new",
+			"system(\"clear",
+			"free",
+			"new",
+			"_name",
+			"newEntry",
+			"SetPositionInFile",
+			"SetPositionInEndFile",
+			"DeleteRegister",
+			"Display3Delete",
+			"DeleteRegister"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "DogProgram/Server/p2-dogServer.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4398,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2690,
+								2690
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1441.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "DogProgram/Client/view.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9890,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8168,
+								8168
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 4392.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.470302673103,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 149.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "practicaOS_Client_Server.sublime-project",
+	"replace":
+	{
+		"height": 66.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 1,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 117.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

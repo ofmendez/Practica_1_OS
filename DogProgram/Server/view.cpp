@@ -178,9 +178,9 @@ void DeleteRegister(int _p1){
 //Borra el último item de un archivo.
 void DeleteLastItem(FILE * _file){
 	int finalSize =table.getNumberOfEntries()-1  ; //Items del nuevo archivo
-	printf("Es: %i\n", finalSize);
-	char msg[20] = "Borrando...";
-	ShowMessage(msg); 
+	// printf("Es: %i\n", finalSize);
+	// char msg[20] = "Borrando...";
+	// ShowMessage(msg); 
 
 	SetPositionInFile(_file,0);
 	//Trunca el archivo eliminando el último registro

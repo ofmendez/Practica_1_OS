@@ -1,3 +1,5 @@
+using namespace std;
+ #pragma pack(1)
  struct dogType{
 	char Name[32];
 	char Type[32];
@@ -6,7 +8,6 @@
 	int Heigth;
 	float Weigth;
 	char Sex;
-	// struct dogType *next;
 };
 
 void DogToPrint(dogType *_dog){
